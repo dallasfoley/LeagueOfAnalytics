@@ -35,7 +35,9 @@ export default function Login() {
         />
         <Link href="/auth/home">
           <button
-            onClick={() => signInWithEmailPassword(emailInput, passwordInput)}
+            onClick={() =>
+              signInWithEmailPassword(emailInput, passwordInput)
+            }
             className="h-16 w-16 bg-slate-500 rounded-2xl hover:bg-slate-200
         transition duration-300 hover:scale-110 hover:text-black"
           >
@@ -50,7 +52,9 @@ export default function Login() {
         transition duration-300 hover:scale-110 hover:text-black text-lg"
           >
             <div className="flex justify-center items-center">
-              <h3 className="font-bold mr-2">Sign-In with Google</h3>
+              <h3 className="font-bold mr-2">
+                Sign-In with Google
+              </h3>
               <GoogleIcon className="ml-2" fontSize="large" />
             </div>
           </button>
@@ -60,12 +64,16 @@ export default function Login() {
       <div className="flex items-center">
         <Link href="/auth/home">
           <button
-            onClick={() => signUpWithEmailPassword(emailInput, passwordInput)}
+            onClick={() =>
+              signUpWithEmailPassword(emailInput, passwordInput)
+            }
             className="h-16 w-64 bg-slate-500 rounded-2xl hover:bg-slate-200
         transition duration-300 hover:scale-110 hover:text-black text-lg"
           >
             <div className="flex justify-center items-center">
-              <h3 className="font-bold mr-2">Sign-Up with Email</h3>
+              <h3 className="font-bold mr-2">
+                Sign-Up with Email
+              </h3>
               <MailIcon className="ml-2" fontSize="large" />
             </div>
           </button>
@@ -78,7 +86,9 @@ export default function Login() {
         transition duration-300 hover:scale-110 hover:text-black text-lg"
           >
             <div className="flex justify-center items-center">
-              <h3 className="font-bold mr-2">Sign-Up with Google</h3>
+              <h3 className="font-bold mr-2">
+                Sign-Up with Google
+              </h3>
               <GoogleIcon className=" ml-2" fontSize="large" />
             </div>
           </button>

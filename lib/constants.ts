@@ -8,13 +8,13 @@ import {
 
 export const signUpWithEmailPassword = async (
   email: string,
-  password: string
+  password: string,
 ) => {
   try {
     const userCredential = await createUserWithEmailAndPassword(
       auth,
       email,
-      password
+      password,
     );
     return userCredential.user;
   } catch (error) {
@@ -25,13 +25,13 @@ export const signUpWithEmailPassword = async (
 
 export const signInWithEmailPassword = async (
   email: string,
-  password: string
+  password: string,
 ) => {
   try {
     const userCredential = await signInWithEmailAndPassword(
       auth,
       email,
-      password
+      password,
     );
     return userCredential.user;
   } catch (error) {

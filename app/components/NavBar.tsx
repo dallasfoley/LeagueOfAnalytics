@@ -10,7 +10,9 @@ const NavBar = () => {
   return (
     <div className="w-full h-14 bg-slate-900 flex items-center justify-between ">
       <div className="flex">
-        <h1 className="text-4xl font-bold">League of Analytics</h1>
+        <h1 className="text-4xl font-bold">
+          League of Analytics
+        </h1>
         <div className="mx-5 h-full">
           <QueryStatsIcon fontSize="large" />
         </div>
