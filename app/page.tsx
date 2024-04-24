@@ -33,56 +33,56 @@ export default function Login() {
           required
           className="h-10 w-56 rounded-xl p-2"
         />
-        <button
-          onClick={() => signInWithEmailPassword(emailInput, passwordInput)}
-          className="h-16 w-16 bg-slate-500 rounded-2xl hover:bg-slate-200
+        <Link href="/auth/home">
+          <button
+            onClick={() => signInWithEmailPassword(emailInput, passwordInput)}
+            className="h-16 w-16 bg-slate-500 rounded-2xl hover:bg-slate-200
         transition duration-300 hover:scale-110 hover:text-black"
-        >
-          <Link href="/home">
+          >
             <ArrowForwardIcon fontSize="large" />
-          </Link>
-        </button>
+          </button>
+        </Link>
         <h2 className="font-bold text-lg">or</h2>
-        <button
-          onClick={signInWithGoogle}
-          className="h-16 w-64 bg-slate-500 rounded-2xl hover:bg-slate-200
+        <Link href="/auth/home">
+          <button
+            onClick={signInWithGoogle}
+            className="h-16 w-64 bg-slate-500 rounded-2xl hover:bg-slate-200
         transition duration-300 hover:scale-110 hover:text-black text-lg"
-        >
-          <Link href="/home">
+          >
             <div className="flex justify-center items-center">
               <h3 className="font-bold mr-2">Sign-In with Google</h3>
               <GoogleIcon className="ml-2" fontSize="large" />
             </div>
-          </Link>
-        </button>
+          </button>
+        </Link>
       </div>
       <h3 className="my-4">{`Don\'t have an account yet?`}</h3>
       <div className="flex items-center">
-        <button
-          onClick={() => signUpWithEmailPassword(emailInput, passwordInput)}
-          className="h-16 w-64 bg-slate-500 rounded-2xl hover:bg-slate-200
+        <Link href="/auth/home">
+          <button
+            onClick={() => signUpWithEmailPassword(emailInput, passwordInput)}
+            className="h-16 w-64 bg-slate-500 rounded-2xl hover:bg-slate-200
         transition duration-300 hover:scale-110 hover:text-black text-lg"
-        >
-          <Link href="/home">
+          >
             <div className="flex justify-center items-center">
               <h3 className="font-bold mr-2">Sign-Up with Email</h3>
               <MailIcon className="ml-2" fontSize="large" />
             </div>
-          </Link>
-        </button>
+          </button>
+        </Link>
         <h2 className="font-bold text-lg mx-4">or</h2>
-        <button
-          onClick={signInWithGoogle}
-          className="h-16 w-64 bg-slate-500 rounded-2xl hover:bg-slate-200
+        <Link href="/auth/home">
+          <button
+            onClick={signInWithGoogle}
+            className="h-16 w-64 bg-slate-500 rounded-2xl hover:bg-slate-200
         transition duration-300 hover:scale-110 hover:text-black text-lg"
-        >
-          <Link href="/home">
+          >
             <div className="flex justify-center items-center">
               <h3 className="font-bold mr-2">Sign-Up with Google</h3>
               <GoogleIcon className=" ml-2" fontSize="large" />
             </div>
-          </Link>
-        </button>
+          </button>
+        </Link>
       </div>
     </div>
   );
