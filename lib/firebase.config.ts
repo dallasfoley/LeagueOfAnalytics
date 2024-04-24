@@ -3,13 +3,13 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAU_bhW_P4gSKTAPT_yUcNfz5_q-VPQy84",
-  authDomain: "league-of-analytics.firebaseapp.com",
-  projectId: "league-of-analytics",
-  storageBucket: "league-of-analytics.appspot.com",
-  messagingSenderId: "645799976707",
-  appId: "1:645799976707:web:a0dd324f67c4cd0f421336",
-  measurementId: "G-99M5C2D3PK",
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
