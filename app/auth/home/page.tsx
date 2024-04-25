@@ -6,7 +6,7 @@ import HomeIcon from "@mui/icons-material/Home";
 
 const Home = () => {
   return (
-    <div className="w-full h-full flex flex-col justify-start items-center">
+    <div className="w-full h-full flex flex-col justify-around items-center">
       <section className="flex justify-around w-full h-3/5 text-xl font-bold">
         <div className="flex flex-col justify-center items-center m-0">
           <button
@@ -43,7 +43,9 @@ const Home = () => {
         </div>
       </section>
 
-      <h1 className="text-5xl">Favorited Summoners</h1>
+      <h1 className="text-5xl text-center">
+        Favorited Summoners
+      </h1>
     </div>
   );
 };

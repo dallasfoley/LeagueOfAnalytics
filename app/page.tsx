@@ -11,9 +11,13 @@ import {
 } from "@/lib/constants";
 import { useState } from "react";
 
+import { auth } from "../lib/firebase.config";
+import { useRouter } from "next/navigation";
+
 export default function Login() {
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
+  const router = useRouter();
 
   return (
     <div className="h-full w-full flex flex-col justify-center items-center">
@@ -45,20 +49,19 @@ export default function Login() {
           </button>
         </Link>
         <h2 className="font-bold text-lg">or</h2>
-        <Link href="/auth/home">
-          <button
-            onClick={signInWithGoogle}
-            className="h-16 w-64 bg-slate-500 rounded-2xl hover:bg-slate-200
+
+        <button
+          onClick={signInWithGoogle}
+          className="h-16 w-64 bg-slate-500 rounded-2xl hover:bg-slate-200
         transition duration-300 hover:scale-110 hover:text-black text-lg"
-          >
-            <div className="flex justify-center items-center">
-              <h3 className="font-bold mr-2">
-                Sign-In with Google
-              </h3>
-              <GoogleIcon className="ml-2" fontSize="large" />
-            </div>
-          </button>
-        </Link>
+        >
+          <div className="flex justify-center items-center">
+            <h3 className="font-bold mr-2">
+              Sign-In with Google
+            </h3>
+            <GoogleIcon className="ml-2" fontSize="large" />
+          </div>
+        </button>
       </div>
       <h3 className="my-4">{`Don\'t have an account yet?`}</h3>
       <div className="flex items-center">
